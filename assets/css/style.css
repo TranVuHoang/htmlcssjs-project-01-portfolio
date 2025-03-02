@@ -61,6 +61,20 @@ section {
   text-shadow: 0 0 1px currentColor;
 }
 
+.section-heading {
+  text-align: center;
+  font-size: 4.5rem;
+  font-weight: bold;
+}
+
+.section-img {
+  width: 25vw;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 20px #7b7b7b;
+}
+
+
 /*--------------------------------------
 # header & navbar styling 
 ----------------------------------------*/
@@ -120,11 +134,14 @@ section {
   color: var(--primary-color);
 }
 
+.home__icon-hand {
+  width: 25px;
+}
+
 .home__heading-desc {
   font-size: 3.2rem;
   font-weight: 700;
 }
-
 
 .home__heading-desc span {
   color: var(--primary-color);
@@ -134,6 +151,7 @@ section {
   margin-top: 20px;
   font-size: 1.6rem;
   width: 455px;
+  line-height: 1.67;
 }
 
 /* .home__socials {
@@ -165,10 +183,6 @@ section {
 }
 
 .home__img {
-  width: 25vw;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 0 20px #7b7b7b;
   animation: floatImage 4s ease-in-out infinite;
 }
 
@@ -189,6 +203,36 @@ section {
 /*--------------------------------------
 # about section styling 
 ----------------------------------------*/
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  bottom: var(--section-color);
+}
+
+.about__heading-title {
+  line-height: 1.2;
+}
+
+.heading-text {
+  color: var(--primary-color);
+}
+
+.about__heading-desc {
+  font-size: 2.6rem;
+}
+
+.section-desc{
+  margin: 2rem 0 3rem;
+  font-size: 1.6rem;
+  line-height: 1.67;
+}
+
+.about__img {
+  /* flex-shrink: 1; */
+  height: 25vw;
+}
 
 /*--------------------------------------
 # services section styling 
