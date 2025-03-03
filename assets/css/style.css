@@ -379,7 +379,46 @@ section {
 /*--------------------------------------
 # contact section styling 
 ----------------------------------------*/
+.project__heading-title {
+  margin-top: 3rem;
+}
 
+.contact-form {
+  max-width: 70rem;
+  margin: 1rem auto;
+  text-align: center;
+}
+
+.input-box {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+}
+
+.contact-input, .contact-textarea {
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  background: var(--section-color);
+  border-radius: .8rem;
+  color: var(--text-color);
+  margin: 0.7rem 0;
+}
+
+.contact-input {
+  width: 49%;
+}
+
+.contact-textarea {
+  /* resize: none; */
+}
+
+.contact-submit {
+  margin-top: 2rem;
+  cursor: pointer;
+}
 /*--------------------------------------
 # footer section styling 
 ----------------------------------------*/
