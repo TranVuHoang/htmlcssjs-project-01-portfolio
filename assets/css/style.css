@@ -74,7 +74,6 @@ section {
   box-shadow: 0 0 20px #7b7b7b;
 }
 
-
 /*--------------------------------------
 # header & navbar styling 
 ----------------------------------------*/
@@ -184,6 +183,7 @@ section {
 
 .home__img {
   animation: floatImage 4s ease-in-out infinite;
+  object-position: left;
 }
 
 @keyframes floatImage {
@@ -207,8 +207,8 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 4rem;
-  bottom: var(--section-color);
+  gap: 8rem;
+  background: var(--section-color);
 }
 
 .about__heading-title {
@@ -223,21 +223,61 @@ section {
   font-size: 2.6rem;
 }
 
-.section-desc{
+.section-desc {
   margin: 2rem 0 3rem;
   font-size: 1.6rem;
   line-height: 1.67;
 }
 
 .about__img {
-  /* flex-shrink: 1; */
+  object-position: top;
   height: 25vw;
 }
 
 /*--------------------------------------
 # services section styling 
 ----------------------------------------*/
+.services__row {
+  margin-top: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
 
+.service__box {
+  flex: 1 1 30rem;
+  background: var(--section-color);
+  padding: 3rem 2rem 4rem;
+  border-radius: 2rem;
+  text-align: center;
+  border: 0.2rem solid var(--body-color);
+  transition: all 0.5s ease;
+}
+
+.service__box:hover {
+  border-color: var(--primary-color);
+  transform: scale(1.02);
+}
+
+.services__box-icon {
+  font-size: 7rem;
+  color: var(--primary-color);
+}
+
+.services__box-title {
+  font-size: 2.6rem;
+}
+
+.services__box-desc {
+  margin-top: 1rem;
+  font-size: 1.6rem;
+}
+
+.services__btn {
+  margin-top: 3rem;
+}
 /*--------------------------------------
 # project section styling 
 ----------------------------------------*/
