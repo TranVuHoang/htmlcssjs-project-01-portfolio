@@ -74,6 +74,17 @@ section {
   box-shadow: 0 0 20px #7b7b7b;
 }
 
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp, 2);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-4 {
+  --line-clamp: 4;
+}
+
 /*--------------------------------------
 # header & navbar styling 
 ----------------------------------------*/
@@ -184,6 +195,9 @@ section {
 .home__img {
   animation: floatImage 4s ease-in-out infinite;
   object-position: left;
+  height: 25vw;
+  object-position: top;
+  background-image: var(--body-color);
 }
 
 @keyframes floatImage {
@@ -240,13 +254,14 @@ section {
 .services__row {
   margin-top: 5rem;
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
 }
 
 .service__box {
+  /* min-height: 358px; */
   flex: 1 1 30rem;
   background: var(--section-color);
   padding: 3rem 2rem 4rem;
@@ -281,6 +296,85 @@ section {
 /*--------------------------------------
 # project section styling 
 ----------------------------------------*/
+
+.project {
+  background: var(--section-color);
+}
+
+.project__heading-title {
+}
+
+.project__list {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.project__box {
+  position: relative;
+  border-radius: 2rem;
+  box-shadow: 0 0 1rem var(--body-color);
+  overflow: hidden;
+  display: flex;
+}
+
+.project__img {
+  width: 100%;
+  transition: transform 0.5s ease;
+}
+
+.project__img:hover {
+  transform: scale(1.1);
+}
+
+.project__layer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0 4rem;
+  background: linear-gradient(#00000080, var(--primary-color));
+  color: var(--section-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+  text-align: center;
+}
+
+.project__box:hover .project__layer {
+  transform: translateY(0);
+}
+
+.project__layer-title {
+  font-size: 3rem;
+}
+
+.project__layer-desc {
+  font-size: 1.6rem;
+  margin-top: 0.3rem;
+}
+
+.project__box-link {
+  margin-top: 1rem;
+  width: 4rem;
+  height: 4rem;
+  background: var(--text-color);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project__box-icon {
+  font-size: 1.5rem;
+  color: var(--section-color);
+}
 
 /*--------------------------------------
 # contact section styling 
